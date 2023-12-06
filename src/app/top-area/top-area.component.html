@@ -1,0 +1,50 @@
+<div class="container">
+  <nav class="navbar">
+    <h1>Welcome back, Olivia</h1>
+    <ul class="list">
+      <li class="me-2 fs-5"><i class="bi bi-search"></i></li>
+      <li><button class="btn">Customize</button></li>
+      <li><button class="btn">Export</button></li>
+    </ul>
+  </nav>
+
+  <div class="graphs mt-3" >
+    <div class="column-graph borders">
+      <div class="heading">
+        <img class="vendor-img" src="https://via.placeholder.com/150" alt="">
+        <div class="d-flex flex-column justify-content-center w-100">
+          <h3 class="fw-bold fs-4 mb-0">Vendor breakdown</h3>
+          <h5 class="text-secondary fs-6">keep track of vendors and their security ratings.</h5>
+        </div>
+        <i class="bi bi-three-dots-vertical"></i>
+      </div>
+      <div class="graph p-2">
+     <highcharts-chart
+     [Highcharts]="highcharts"
+     [options]="barChart"
+     class="chart">
+    </highcharts-chart>
+      </div>
+      <div class="bottom">
+        <button class="btn">View full report</button>
+      </div>
+    </div>
+    <div class="donut-graph borders">
+     <div class="heading">
+     <div class="w-100">
+      <h3 class="fw-bold fs-4 my-2">Vendors Monitored</h3>
+      <h5 class="text-secondary fs-6 mb-2">You're using 80% of available sports.</h5>
+     </div>
+     <i class="bi bi-three-dots-vertical"></i>
+     </div>
+     <div class="graph p-2" style="height: 265px;">
+
+
+
+     </div>
+     <div class="bottom">
+      <button class="btn">Upgrade Plan</button>
+    </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="container p-3">
+  <div class="heading">
+    <div class="w-100">
+      <h1 class="fs-4 my-3">Team members <span class="badge rounded-pill text-bg-success">{{grid_data.length}}</span></h1>
+    </div>
+    <i class="bi bi-three-dots-vertical"></i>
+  </div>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th><input type="checkbox" name="check" (change)="selectAll($event)"></th>
+        <th *ngFor="let names of column_names">{{names}}</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of grid_data">
+        <td><input type="checkbox" [(ngModel)]="data.selected"></td>
+        <td>{{data.name.first_name}} {{data.name.last_name}}</td>
+        <td [ngClass]="data.status == 'Customer' ? 'badge rounded-pill text-bg-success' : 'badge rounded-pill text-bg-secondary' ">{{data.status}}</td>
+        <td>{{data.role}}</td>
+        <td>{{data.license_used}}</td>
+        <td>{{values}}</td>
+        <td>
+          <button class="btn"><i class="bi bi-pencil"></i></button>
+          <button class="btn"><i class="bi bi-trash3"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
